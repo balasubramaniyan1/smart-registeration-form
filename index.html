@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container" id="formCard">
+        <h2 class="create__account">Create Account</h2>
+        <form id="registrationForm">
+
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Minimum 6 characters">
+                <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <!-- Bio Field -->
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" maxlength="200" placeholder="Tell us about yourself..."></textarea>
+                <div class="counter-container">
+                    <div class="error-message" id="bioError"></div>
+                    <div class="char-counter" id="charCounter">0 / 200 characters</div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn" disabled>Register</button>
+        </form>
+    </div>
+
+    <!-- Acknowledgement Interface Card (Hidden initially) -->
+    <div class="card-container hidden" id="ackCard">
+        <div class="ack-screen">
+            <div class="success-icon">✓</div>
+            <h2>Registration Complete!</h2>
+            <p>Thank you for signing up, <strong id="registeredName">User</strong>. Your account has been created
+                successfully.</p>
+            <button id="backBtn" class="secondary-btn">Go Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
